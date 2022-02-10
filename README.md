@@ -9,6 +9,13 @@ raspberry pi midi host
 3. Run `./scripts/configure.sh midihost`, replace `midihost` with your hostname
 4. Plug in a midi device, and check `journalctl -u midihost -fl`
 
+Setting the system into `ro` mode is not performed for you by this script. Should you want to be able to pull the power and not screw up the sdcard, make sure you enable read-only mode.
+
+1. `sudo raspi-config`
+2. `4 - Performance`
+3. `P3 - Overlay File System`
+4. Reboot
+
 # Sources
 
 - (2022-02-10) https://neuma.studio/rpi-midi-complete.html
